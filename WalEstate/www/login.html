@@ -46,30 +46,35 @@
         <title>Login</title>
     </head>
     <body>
-
+<div class="wrapper">
         <!-- PAGE 2 -->
 
-<div data-role="page" id="login-page">
+<div data-role="page" id="login-page" class="container">
 
      <div data-role="header">         
-<h2> <a href="index.html"> < </a>  Login page</h2>
+<h2> <a href="index.html"> < Home  </a>  </h2>
 </div>
 
-<div role="main" class="ui-content">
+<!--  <div role="main" class="ui-content"> -->
    
-   <a href="signup.html"><h4>Sign Up</h4></a>
+   
 
-   <form method="POST" action="feed.html">
-    <div class="form-wrapper">
+   <form method="POST" action="feed.html" class="form">
+    <!--  <div class="form-wrapper">-->
    <input type="email" placeholder="Email" required/>
    <input type="password" placeholder="Password" required/>
-</div>
-</br>
-   <input type="submit" value="Login" id="loginBtn" onClick="buttonOnClick(this)"/>
-</form>
-   <a href="forgot.html"><h4>Forgot Password?</h4></a>
-  
 
+</br>
+   <button type="submit" value="Login" id="login-button" onClick="buttonOnClick(this)">Log In</button>
+
+
+  
+  </br>
+  <a href="forgot.html"><h5>Forgot Password?</h5></a>
+   <a href="signup.html"><h5>Sign Up</h5></a>
+  
+  
+</form>
 </div><!--end of main role -->
 
     </div><!--end of page data-role -->
