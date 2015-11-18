@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
@@ -18,67 +22,85 @@
     under the License.
 -->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
-         <script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/index.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/walestate.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/jquery-2.1.4.min.js" charset="utf-8"></script> 
-        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 
 
-        <title>Login</title>
-    </head>
-    <body>
-<div class="wrapper">
-        <!-- PAGE 2 -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+    <script src="js/walestate.js" charset="utf-8"></script>
+    <script type="text/javascript" src="cordova.js" ></script>
+    <script type="text/javascript" src="js/index.js" ></script>
+    <script type="text/javascript" src="js/fastclick.js" ></script>
+
+
+    <title>WalEstate</title>
+</head>
+<body>
+
+
+<!-- PAGE 3 -->
 
 <div data-role="page" id="login-page" class="container">
 
-     <div data-role="header">         
-<h2> <a href="index.html"> < Home  </a>  </h2>
+    <!--header-->
+    <div data-role="header" data-position="fixed" id="nav">
+        <div data-rel="back" id="left-arrow" onclick="goBack()"></div>
+        <div class="logo"><a href="index.html"> <input type="image" src="../img/icon.png"/></a> </div>
+    </div>
+
+
+
+
+    <!--content-->
+    <div data-role="content" class="ui-content" >
+
+        <a href="forgot.html"><h4 id="forgoth4">Forgot Password?</h4></a>
+        <a href="signup.html"><h4>Sign Up</h4></a>
+
+        <form method="POST" action="feed.html">
+
+            <div class="form-wrapper">
+                <input type="email" id="login-email-id" placeholder="Email Address" required/>
+                <input type="password" id="login-password-id" placeholder="Password" required/>
+            </div><!--end of form-wrapper -->
+
+
+            </br>
+
+            <input type="submit" value="Login" id="loginBtn" />
+
+        </form>
+
+    </div><!-- end of content data-role -->
+
+
+    <!--footer-->
+
+    <div data-role="footer" >
+        <a href="list.html"  >List</a>
+        <a href="save.html" >Save </a>
+
+    </div>
+
+
 </div>
 
-<!--  <div role="main" class="ui-content"> -->
-   
-   
 
-   <form method="POST" action="feed.html" class="form">
-    <!--  <div class="form-wrapper">-->
-   <input type="email" placeholder="Email" required/>
-   <input type="password" placeholder="Password" required/>
-
-</br>
-   <button type="submit" value="Login" id="login-button" onClick="buttonOnClick(this)">Log In</button>
-
-
-  
-  </br>
-  <a href="forgot.html"><h5>Forgot Password?</h5></a>
-   <a href="signup.html"><h5>Sign Up</h5></a>
-  
-  
-</form>
-</div><!--end of main role -->
-
-    </div><!--end of page data-role -->
-
-
-       </body>
+</body>
 </html>

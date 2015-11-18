@@ -33,41 +33,48 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css">
 
-         <script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/index.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/walestate.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/jquery-2.1.4.min.js" charset="utf-8"></script> 
-        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+        
+         <script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script> 
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+       
+        <script type="text/javascript" src="cordova.js" ></script>
+        <script type="text/javascript" src="js/index.js" ></script>
+        <script type="text/javascript" src="js/fastclick.js" ></script>
 
 
         <title>WalEstate</title>
     </head>
     <body>
-<div class="wrapper">
 
-        <div data-role="page" id="forgot-page" class="container">
+  <div data-role="page" id="forgot-page" class="container">
+
+            
+            <div data-role="header" data-position="fixed" id="nav">
+<div data-position="fixed" id="left-arrow" onclick="goBack()"></div><h2>  Reset your password</h2>
+</div>
+
+<div date-role="content" class="ui-content">
+
+<p> Please enter your email address and we'll send you an email to reset your password. </p>
+
+<form method="POST" action="">
 
 
- <h1>    Reset your password</h1>
-
-</br>
-<p> Please enter your email address and we'll send you an email to reset your password </p>
-
-<form method="POST" action class="form">
+<input type="email" placeholder="Email Address" autofocus="autofocus" style="border-radius:4px;box-shadow: 0 1px 2px rgba(0,0,0,.1);box-sizing: border-box;width:90%;margin:auto!important;padding-left:3%;padding-right:3%" required/> 
 
 
-<input type="email" placeholder="Email" required/> 
-</br>
-
-<button type="submit" id="login-button" ><a href="reset.html">Submit</a></button>
+ <input type="submit" value="Reset Password" id="resetBtn" onclick="buttonclicked(event)"/>
 
     </form><!--end of form -->
 
+   
+</div><!-- end of content data-role -->
 
 </div><!--end of forgot-page -->
-</div>
+
+ <script type="text/javascript" src="js/walestate.js" charset="utf-8"></script>
    </body>
 </html>

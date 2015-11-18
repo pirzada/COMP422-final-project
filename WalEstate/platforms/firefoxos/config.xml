@@ -19,4 +19,11 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <feature name="Notification">
+        <param name="firefoxos-package" value="Notification" />
+    </feature>
+    <feature name="Camera">
+        <param name="firefoxos-package" value="Camera" />
+    </feature>
+    <permission description="Required for accessing user location." name="geolocation" />
 </widget>

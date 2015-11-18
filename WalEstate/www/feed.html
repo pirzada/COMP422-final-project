@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
@@ -18,64 +22,103 @@
     under the License.
 -->
 <html>
-    <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 
-         <script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/index.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/walestate.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/jquery-2.1.4.min.js" charset="utf-8"></script> 
-        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 
 
-        <title>Feed</title>
-    </head>
-    <body>
-
-<div data-role="page" id="feed-page">
-
-
-
-<header>
-    <div id="left-arrow"></div>
-    <h3>City, Country</h3>
-<div id="share-icon"></div>
-</header>
-
-<div id="property-container">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+    <script src="js/walestate.js" charset="utf-8"></script>
+    <script type="text/javascript" src="cordova.js" ></script>
+    <script type="text/javascript" src="js/index.js" ></script>
+    <script type="text/javascript" src="js/fastclick.js" ></script>
 
 
-<!-- heart icon -->
-   <div id="property-heart"></div> 
+    <title>WalEstate</title>
+</head>
+<body>
 
-<!--price div -->
-<div id="property-price">
-    <p>$1,250</p>
+
+<!-- PAGE 1 -->
+
+<div data-role="page" id="page1" class="container">
+
+    <!--header-->
+    <div data-role="header" data-position="fixed" id="nav">
+        <div data-rel="back" id="left-arrow" onclick="goBack()"></div>
+        <input type="search" placeholder="location" onclick="getLocation()"required/>
+
+    </div>
+
+
+
+
+    <!--content-->
+    <div data-role="content" class="ui-content" >
+        <ul data-role="listview" data-inset="true">
+
+            <li>
+
+                <div id="property-container">
+
+                    <!-- heart icon -->
+                    <div id="property-heart"></div>
+
+                    <!--price div -->
+                    <div id="property-price">
+                        <p>$1,250</p>
+                    </div>
+
+                    <!--agent icon -->
+                    <div id="property-agent"></div>
+
+
+                </div><!--end of property-container -->
+
+
+                <div id="property-details">
+                    <h3>An Urban Sanctuary in Portland</h3>
+                    <h6>Private Room * 6 Reviews * Portland</h6>
+                </div>
+
+            </li>
+
+
+        </ul>
+
+
+    </div><!-- end of content data-role -->
+
+    <div data-role="footer" >
+
+
+    </div>
+
 </div>
 
-<!--agent icon -->
- <div id="property-agent"></div>  
 
-</div><!--end of property-container -->
-
-
-
-    </div><!--end of page data-role -->
-
-        </body>
+</body>
 </html>
+
+
+
+
+
+
+
+

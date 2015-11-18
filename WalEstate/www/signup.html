@@ -33,51 +33,67 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+       <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css">
 
-         <script type="text/javascript" src="cordova.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/index.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/walestate.js" charset="utf-8"></script>
-        <script type="text/javascript" src="js/jquery-2.1.4.min.js" charset="utf-8"></script> 
-        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" charset="utf-8"></script>
+        
+         <script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script> 
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js" ></script>
+        <script src="js/walestate.js" charset="utf-8"></script>
+        <script type="text/javascript" src="cordova.js" ></script>
+        <script type="text/javascript" src="js/index.js" ></script>
+        <script type="text/javascript" src="js/fastclick.js" ></script>
 
 
         <title>WalEstate</title>
     </head>
     <body>
 
-<div class="wrapper">
-        <!-- PAGE 3 -->
+
+     <!-- PAGE 3 -->
 
 <div data-role="page" id="signup-page" class="container">
 
+          <!--header-->
+            <div data-role="header" data-position="fixed" id="nav">
+ <div data-rel="back" id="left-arrow" onclick="goBack()"></div>
+</div>
 
- <h1>  Sign up </h1> <a href="login.html"><h4>or Login</h4></a> 
 
 
 
+    <!--content-->
+<div data-role="content" class="ui-content" >
 
-<form method="POST" action="add-profile-pix.html" class="form">
+<a href="login.html"><h4 >Login</h4></a>
 
-    
-<input type="text" placeholder="First Name" required/>
-<input type="text" placeholder="Last Name" required/>
-<input type="email" placeholder="Email" required/>
-   <input type="password" placeholder="Password" required/>
-   <input type="password" placeholder="Confirm Password" required/>
-   <input type="date" placeholder="Date of Birth" required/>
+<form method="POST" action="add-profile-pix.html">
 
+    <div class="form-wrapper">
+
+<input type="text" id="fname" placeholder="First Name" required/>
+<input type="text" id="lname" placeholder="Last Name" required/>
+<input type="email" id="email" placeholder="Email Address" required/>
+<input type="tel" id="tel" placeholder="Phone number" required/>
+   <input type="password" id="password" placeholder="Password" required/>
+   <input type="password" id="password2" placeholder="Confirm Password" required/>
+   
+</div>
    </br>
-   <button type="submit" value="Sign Up" id="signUpBtn" onClick="buttonOnClick(this)"/> Sign up</button>
-</br>
-
-
+   <input type="submit" value="Sign Up" id="signUpBtn" />
 </form>
 
-</div><!--end of main role -->
+<p>By signing up, I agree to WalEstate's <a id="orange" href="">Terms of Service</a>, <a id="orange" href="">Privacy Policy</a>, and <a id="orange" href="">Refund Policy</a>.</p>
 
-    </div><!--end of wrapper -->
+</div><!-- end of content data-role -->
+
+
+    <div data-role="footer" >
+
+
+    </div>
+</div>
+
 
        </body>
 </html>
