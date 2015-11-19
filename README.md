@@ -1,2 +1,2 @@
 # COMP422-final-project
-Wal-Estate Android app
+Real RE Android app
